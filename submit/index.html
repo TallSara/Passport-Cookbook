@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Passport Cookbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header>
+    <div class="content-wrapper">
+      <nav class="nav flex-row">
+          <div class="nav-brand">
+            <a href="../index.html">
+              <img src="../img/logo.svg" alt="Passport Cookbook Logo" />
+            </a>
+          </div>
+          <div class="toggle-collapse">
+            <div class="toggle-icon text-white">
+              <span class="text-white"><i class="fas fa-bars"></i></span>
+            </div>
+          </div>
+          <div class="nav-items">
+              <ul class="nav-items flex-row">
+                <li class="nav-link"><a href="../beverages/index.html" class="text-white">Beverages</a></li>
+                <li class="nav-link"><a href="../appetizers/index.html" class="text-white">Appetizers</a></li>
+                <li class="nav-link"><a href="../salads/index.html" class="text-white">Salads</a></li>
+                <li class="nav-link"><a href="../soups/index.html" class="text-white">Soups</a></li>
+                <li class="nav-link"><a href="../entrees/index.html" class="text-white">Entrees</a></li>
+                <li class="nav-link"><a href="../desserts/index.html" class="text-white">Desserts</a></li>
+                <li class="nav-link"><a href="../submit/index.html" class="text-white"><button type="button">Submit</button></a></li>
+              </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="title">
+        <div class="content-wrapper">
+          <!--Change Recipe Type-->
+          <h1>Submit Your Recipe</h1>
+          <div class="divider"></div>
+        </div>
+      </section>
+      <section class="form">
+            <div class="content-wrapper">
+              <form action=”https://formspree.io/f/mbjpalwj” method="POST" id="my-form">
+                <div class="form-group">
+                  <label for="name" class="title">Your Name <span>*</span></label>
+                  <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                  <label for="email" class="title">Passport Email <span>*</span></label>
+                  <input type="text" id="email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="recipe-title" class="title">Recipe Title <span>*</span></label>
+                  <input type="text" id="recipe-title" name="recipe-title">
+                </div>
+                <div class="form-group">
+                  <label for="recipe-type" class="title">Category <span>*</span></label>
+                  <input type="radio" id="bev" name="reipe-type" value="bev" class="radio-btn">
+                  <label for="bev" class="selection">Beverage</label><br>
+                  <input type="radio" id="app" name="reipe-type" value="app" class="radio-btn">
+                  <label for="app" class="selection">Appetizer</label><br>
+                  <input type="radio" id="salad" name="reipe-type" value="salad" class="radio-btn">
+                  <label for="salad" class="selection">Salad</label><br>
+                  <input type="radio" id="soup" name="reipe-type" value="soup" class="radio-btn">
+                  <label for="soup" class="selection">Soup</label><br>
+                  <input type="radio" id="entree" name="reipe-type" value="entree" class="radio-btn">
+                  <label for="entree" class="selection">Entree</label><br>
+                  <input type="radio" id="dessert" name="reipe-type" value="dessert" class="radio-btn">
+                  <label for="dessert" class="selection">Dessert</label>
+                </div>
+                <div class="form-group">
+                  <label for="preptime" class="title">Prep Time <span>*</span></label>
+                  <input type="text" id="preptime" name="preptime">
+                </div>
+                <div class="form-group">
+                  <label for="cooktime" class="title">Cook Time <span>*</span></label>
+                  <input type="text" id="cooktime" name="cooktime">
+                </div>
+                <div class="form-group">
+                  <label for="totaltime" class="title">Total Time <span>*</span></label>
+                  <input type="text" id="totaltime" name="totaltime">
+                </div>
+                <div class="form-group">
+                  <label for="ingredients" class="title">Ingredients (please include quantities/weights) <span>*</span></label>
+                  <textarea id="ingrdients" name="ingredients" rows="10" cols="35"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="directions" class="title">Directions / Instructions / Steps <span>*</span></label>
+                  <textarea id="directions" name="directions" rows="10" cols="35"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="tips" class="title">Preparation Tips / Special Notes</label>
+                  <textarea id="tips" name="tips" rows="10" cols="35"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="story" class="title">Tell us your story! Is this recipe special to you? How? <span>*</span></label>
+                  <textarea id="story" name="story" rows="10" cols="35"></textarea>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="button2">Submit</button>
+                </div>
+              </form>
+            </div>
+            <div id="status" class="success">Thanks!</div>
+            <div id="status" class="error">Oops! There was a problem.</div>
+      </section>
+
+
+
+
+
+        </main>
+        <footer>
+          <div class="content-wrapper">
+            <div class="footer-content">
+              <div class="footer-text">
+                <p>Passport Cookbook is sponsored by:</p>
+              </div>
+              <div class="footer-image">
+                <img src="../img/webelonglogo.svg" alt="We Belong Logo" />
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
+
+
+
+  <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

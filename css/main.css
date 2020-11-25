@@ -98,7 +98,7 @@ nav {
   position: relative;
   justify-content: space-between;
   height: 0em;
-  min-height: 10vh;
+  min-height: 12vh;
   overflow-y: hidden;
   transition: all 1s ease;
 }
@@ -106,6 +106,7 @@ nav {
 nav .nav-brand {
   display: flex;
   margin: 4px 0;
+  cursor: pointer;
 }
 
 nav .nav-items {
@@ -143,6 +144,28 @@ nav .toggle-collapse .toggle-icon i {
 
 .collapse {
   height: 32em;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #0070f7;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  outline: none;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #1f2042;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
 }
 
 footer {
@@ -202,6 +225,85 @@ section ul li:before {
 
 section .recipe {
   margin: 20px 0;
+}
+
+section .form {
+  margin: 0;
+}
+
+/* Style form */
+
+form {
+  margin: 40px 0;
+}
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #C0C5D7;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.form-group {
+  margin: 20px 0;
+}
+
+label.title {
+  font-size: .75em;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+}
+
+.button2 {
+  width: 100%;
+}
+
+.button2:hover {
+  background-color: #1f2042;
+  color: #fff;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+#status {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#status.success {
+  color: #fff;
+  background-color: #00AC2D;
+  font-size: .75em;
+  font-weight: 700;
+  animation: status 4s ease forwards;
+}
+
+#status.error {
+  background-color: #E32C2C;
+  color: #fff;
+  font-size: .75em;
+  font-weight: 700;
+  animation: status 4s ease forwards;
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .profile {
@@ -444,6 +546,14 @@ textarea {
     width: 100%;
   }
 
+  input[type=text], select, textarea{
+    width: 70%;
+  }
+
+  .button2 {
+    width: 70%;
+  }
+
   .recipe-text{
     display: flex;
     justify-content: flex-start;
@@ -509,7 +619,7 @@ textarea {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1111px) {
   nav .nav-items {
     flex-direction: column;
   }
@@ -530,7 +640,7 @@ textarea {
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1112px) {
   nav .toggle-collapse {
     display: none;
 }
